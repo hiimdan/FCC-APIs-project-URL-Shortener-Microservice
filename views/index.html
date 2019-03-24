@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <title>URL Shortener</title>
+      <link rel="shortcut icon" href="https://cdn.glitch.com/b9622543-866c-46b5-93d8-e44abeb9d03c%2FPelfusion-Long-Shadow-Media-Settings.ico?1553202190389" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+        <h2>API Project: URL Shortener Microservice</h2>
+        <h3>Details:</h3>
+        <ol>
+          <li>You can POST a new URL to <code>https://sunny-avocado.glitch.me/api/shorturl/new</code> and receive a shortened URL in the JSON response.<br>Example : <code>{"original_url":"www.google.com","short_url":1}</code></li>
+          <li>If you pass an invalid URL that doesn't follow the <code>http(s)://www.example.com(/more/routes)</code> format, the JSON response will contain an error. Example: <code>{"error":"invalid URL"}</code></li>
+          <li>When you visit the shortened URL, it will redirect you to your original link.</li>
+        </ol>
+        
+        <h3>Short URL Creation </h3>
+        <p>
+          example: <code>POST https://sunny-avocado.glitch.me/api/shorturl/new/api/shorturl/new</code> - <code>https://www.google.com</code>
+        </p>
+        <form action="api/shorturl/new" method="POST">
+          <label for="url_input">URL to be shortened</label>
+          <input id="url_input" type="text" name="url" value="https://www.google.com">
+          <input type="submit" value="POST URL">
+        </form>
+        <h3>Example Usage:</h3>
+        <a href="https://sunny-avocado.glitch.me/api/shorturl/4">
+          https://sunny-avocado.glitch.me/api/shorturl/4
+        </a>
+
+        <h3>Will Redirect to:</h3>
+        <p>https://github.com/hiimdan</p>
+      </div>
+      <div class="footer">
+        <p>
+          By hiimdan. Repository for project available on <a href="https://github.com/hiimdan/FCC-APIs-project-Timestamp-Microservice-" target="_blank">Github</a>.
+        </p>
+      </div>
+   </body>
+
+
+</html>
